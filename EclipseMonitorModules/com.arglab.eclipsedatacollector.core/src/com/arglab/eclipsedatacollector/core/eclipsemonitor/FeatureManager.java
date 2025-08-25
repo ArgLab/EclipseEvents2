@@ -30,19 +30,19 @@ import com.arglab.eclipsedatacollector.core.eclipsemonitor.utils.Utils;
 
 public class FeatureManager {
 	
-	private static final String UPDATE_SITE_URL = "https://arglab.github.io/EclipseEvents/eclipse-monitor-update-site";
-//	private static final String FEATURE_ID_216 = "jenkins.feature.group";
-	private static final String FEATURE_ID_316 = "analysis.feature.group";
+	private static final String UPDATE_SITE_URL = "https://arglab.github.io/EclipseEvents2/eclipse-monitor-update-site";
+	private static final String FEATURE_ID_216 = "jenkins.feature.group";
+//	private static final String FEATURE_ID_316 = "analysis.feature.group";
 	private String course;
 	
 	public void installFeatureIfNeeded(String newCourse) {
 		course = newCourse;
-		continueInstall();
+//		continueInstall();
 	}
 	public void installFeatureIfNeeded() {
 		Map<String, String> userPreferences = Utils.getInfo();
 		course = userPreferences.get("course");
-		continueInstall();
+//		continueInstall();
 	}
 	
 	
@@ -78,8 +78,8 @@ public class FeatureManager {
 //        else {
 //        	System.out.println("Something else" + course + isFeatureInstalled(FEATURE_ID_216));
 //        }
-        if (course=="316" && !isFeatureInstalled(FEATURE_ID_316)) {
-            boolean I = installFeature(FEATURE_ID_316);
+        if (course=="316" && !isFeatureInstalled(FEATURE_ID_216)) {
+            boolean I = installFeature(FEATURE_ID_216);
             if(I) {
             	System.out.println("Installed");
             	scheduleRestart = true;
@@ -87,8 +87,8 @@ public class FeatureManager {
             else {
             	System.out.println("Not installed");
             }
-        } else if (course!="316" && isFeatureInstalled(FEATURE_ID_316)) {
-            boolean U = uninstallFeature(FEATURE_ID_316);
+        } else if (course!="316" && isFeatureInstalled(FEATURE_ID_216)) {
+            boolean U = uninstallFeature(FEATURE_ID_216);
             if(U) {
 	        	System.out.println("Uninstalled");
 	        	scheduleRestart = true;
@@ -98,7 +98,7 @@ public class FeatureManager {
             }
         }
         else {
-        	System.out.println("Something else" + course + isFeatureInstalled(FEATURE_ID_316));
+        	System.out.println("Something else" + course + isFeatureInstalled(FEATURE_ID_216));
         }
         if (scheduleRestart == true) {
         	scheduleRestart();

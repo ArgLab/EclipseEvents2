@@ -71,7 +71,7 @@ public class UserLogin extends FieldEditorPreferencePage implements IWorkbenchPr
 //                Display.getDefault().asyncExec(() -> PlatformUI.getWorkbench().restart());
 //            }
         	FeatureManager FM = new FeatureManager();
-        	FM.installFeatureIfNeeded(newCourse);
+//        	FM.installFeatureIfNeeded(newCourse);
         }
         return result;
     }

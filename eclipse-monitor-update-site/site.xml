@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/core_1.0.0.202508201243.jar" id="core" version="1.0.0.202508201243">
+   <feature url="features/core_1.0.0.202508251133.jar" id="core" version="1.0.0.202508251133">
       <category name="Core"/>
    </feature>
-   <feature url="features/analysis_1.0.0.202508201243.jar" id="analysis" version="1.0.0.202508201243"/>
    <category-def name="Core" label="core"/>
 </site>
