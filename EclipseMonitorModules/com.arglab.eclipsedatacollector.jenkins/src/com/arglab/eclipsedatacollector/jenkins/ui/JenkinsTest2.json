@@ -1,0 +1,23 @@
+ {
+  "Jenkins": {
+    "Bash_Comands": {
+      "Command": [
+        "git --version # timeout=10",
+        "git --version # 'git version 2.39.5'"
+      ]
+    },
+    "Build": {
+      "Echo": {
+        "Echo_1": "StudentRecordIO 75 96",
+        "Echo_2": "CourseRecordIO 75 97"
+      },
+      "PMD": {
+        "PMD_line": [
+          "Resolving package names (or namespaces) by parsing the affected files",
+          "-> all affected files already have a valid package name"
+        ]
+      }
+    }
+  }
+}
+ 

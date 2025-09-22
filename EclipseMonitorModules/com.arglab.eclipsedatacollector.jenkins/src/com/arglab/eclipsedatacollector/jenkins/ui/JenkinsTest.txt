@@ -1,0 +1,285 @@
+Started by user Sarah Heckman
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /mnt/216/jobs-201/L05-csc217-TS/workspace
+The recommended git tool is: NONE
+using credential jenkins
+Cloning the remote Git repository
+Cloning repository git@github.ncsu.edu:engr-csc216-spring2025/csc217-TS.git
+ > git init /mnt/216/jobs-201/L05-csc217-TS/workspace # timeout=10
+Fetching upstream changes from git@github.ncsu.edu:engr-csc216-spring2025/csc217-TS.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_SSH to set credentials 
+Verifying host key using manually-configured host key entries
+ > git fetch --tags --force --progress -- git@github.ncsu.edu:engr-csc216-spring2025/csc217-TS.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.ncsu.edu:engr-csc216-spring2025/csc217-TS.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision e2765258e6ee32a3d4aafc13f46315aa18dc8385 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e2765258e6ee32a3d4aafc13f46315aa18dc8385 # timeout=10
+Commit message: "Delete"
+First time build. Skipping changelog.
+[EnvInject] - Executing scripts and injecting environment variables after the SCM step.
+[EnvInject] - Injecting as environment variables the properties content 
+TS_PROJECT_NAME=Lab05_PackScheduler
+TEST_THRESHOLD=80
+PROJECT_NAME=PackScheduler
+LIB_CHECK=true
+COV_CHECK=true
+
+[EnvInject] - Variables injected successfully.
+[workspace] $ /bin/sh -xe /tmp/jenkins693498839126174640.sh
++ set +x
+------------------------------------------------------------
+                       START BUILD
+------------------------------------------------------------
+     [echo] ---> Cleaning workspace
+     [echo] 
+     [echo] ---> Initializing build
+     [echo] 
+     [echo] ---> Building Student Project
+     [echo] 
+     [echo] ---> Building Teaching Staff Tests
+     [echo] 
+     [echo] ---> Running PMD
+net.sourceforge.pmd.PmdAnalysis - Warning at /usr/local/config/csc_pmd.xml:37:5
+ 35|     <rule ref="category/java/codestyle.xml/ForLoopShouldBeWhileLoop" />
+ 36|     <rule ref="category/java/codestyle.xml/FormalParameterNamingConventions" />
+ 37|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseAfterAnnotation" />
+         ^^^^^ Use Rule name category/java/bestpractices.xml/UnitTestShouldUseAfterAnnotation instead of the deprecated Rule name category/java/bestpractices.xml/JUnit4TestShouldUseAfterAnnotation. PMD 8.0.0 will remove support for this deprecated Rule name usage.
+
+ 38|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseBeforeAnnotation" />
+ 39|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseTestAnnotation" />
+net.sourceforge.pmd.PmdAnalysis - Warning at /usr/local/config/csc_pmd.xml:38:5
+ 36|     <rule ref="category/java/codestyle.xml/FormalParameterNamingConventions" />
+ 37|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseAfterAnnotation" />
+ 38|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseBeforeAnnotation" />
+         ^^^^^ Use Rule name category/java/bestpractices.xml/UnitTestShouldUseBeforeAnnotation instead of the deprecated Rule name category/java/bestpractices.xml/JUnit4TestShouldUseBeforeAnnotation. PMD 8.0.0 will remove support for this deprecated Rule name usage.
+
+ 39|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseTestAnnotation" />
+ 40|     <rule ref="category/java/bestpractices.xml/JUnitTestsShouldIncludeAssert" />
+net.sourceforge.pmd.PmdAnalysis - Warning at /usr/local/config/csc_pmd.xml:39:5
+ 37|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseAfterAnnotation" />
+ 38|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseBeforeAnnotation" />
+ 39|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseTestAnnotation" />
+         ^^^^^ Use Rule name category/java/bestpractices.xml/UnitTestShouldUseTestAnnotation instead of the deprecated Rule name category/java/bestpractices.xml/JUnit4TestShouldUseTestAnnotation. PMD 8.0.0 will remove support for this deprecated Rule name usage.
+
+ 40|     <rule ref="category/java/bestpractices.xml/JUnitTestsShouldIncludeAssert" />
+ 41|     <rule ref="category/java/errorprone.xml/TestClassWithoutTestCases" />
+net.sourceforge.pmd.PmdAnalysis - Warning at /usr/local/config/csc_pmd.xml:40:5
+ 38|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseBeforeAnnotation" />
+ 39|     <rule ref="category/java/bestpractices.xml/JUnit4TestShouldUseTestAnnotation" />
+ 40|     <rule ref="category/java/bestpractices.xml/JUnitTestsShouldIncludeAssert" />
+         ^^^^^ Use Rule name category/java/bestpractices.xml/UnitTestShouldIncludeAssert instead of the deprecated Rule name category/java/bestpractices.xml/JUnitTestsShouldIncludeAssert. PMD 8.0.0 will remove support for this deprecated Rule name usage.
+
+ 41|     <rule ref="category/java/errorprone.xml/TestClassWithoutTestCases" />
+ 42|     <rule ref="category/java/errorprone.xml/UnnecessaryBooleanAssertion" />
+net.sourceforge.pmd.PmdAnalysis - This analysis could be faster, please consider using Incremental Analysis: https://docs.pmd-code.org/pmd-doc-7.8.0/pmd_userdocs_incremental_analysis.html
+     [echo] 
+     [echo] ---> Running Checkstyle
+     [echo] 
+     [echo] ---> Executing student unit tests
+     [echo] 
+     [echo] ---> Checking coverage thresholds for source files
+     [echo] 
+     [echo] 
+     [echo] 	CLASS                                    METHOD COVERAGE      LINE COVERAGE       
+     [echo] Project contains 0 JUnit-related PMD alerts
+     [echo] Project contains 682 total assert statements
+     [echo] 	StudentRecordIO                          75                   96                  
+     [echo] 	CourseRecordIO                           75                   97                  
+     [echo] 	CourseCatalog                            100                  90                  
+     [echo] 	ConflictException                        100                  100                 
+     [echo] 	Course                                   94                   90                  
+     [echo] 	Activity                                 100                  90                  
+     [echo] 	User                                     100                  85                  
+     [echo] 	Student                                  100                  83                  
+     [echo] 	StudentDirectory                         100                  89                  
+     [echo] 	RegistrationManager                      100                  90                  
+     [echo] 	RegistrationManager.Registrar            100                  100                 
+     [echo] TOTAL of 0 classes not meeting the 80% line coverage threshold for Teaching Staff tests
+     [echo] TOTAL of 0 classes not meeting the line coverage threshold for full coverage credit
+     [echo] 
+     [echo] ---> Checking for restricted libraries
+     [echo] 	java.util.ArrayList NOT FOUND
+     [echo] 	java.util.LinkedList NOT FOUND
+     [echo] 
+     [echo] ---> Building Teaching Staff Tests
+     [echo] 
+     [echo] ---> Executing Teaching Staff unit tests
+
+BUILD SUCCESSFUL
+Total time: 35 seconds
+------------------------------------------------------------
+                        END BUILD
+------------------------------------------------------------
+Performing Post build task...
+Could not match :BUILD FAILED  : False
+Match found for :BUILD SUCCESSFUL : True
+Could not match :BUILD UNSTABLE  : False
+Logical operation result is TRUE
+Running script  : rm -rf $WORKSPACE/$PROJECT_NAME/ts_test
+rm -rf $WORKSPACE/$PROJECT_NAME/ts_bin
+[workspace] $ /bin/sh -xe /tmp/jenkins6411557396800835036.sh
++ rm -rf /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/ts_test
++ rm -rf /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/ts_bin
+POST BUILD TASK : SUCCESS
+END OF POST BUILD TASK : 0
+Recording test results
+[Checks API] No suitable checks publisher found.
+[JaCoCo plugin] Collecting JaCoCo coverage data...
+[JaCoCo plugin] Version: 3.3.6
+[JaCoCo plugin] **/**.exec;**/bin;**/src/; locations are configured
+[JaCoCo plugin] Number of found exec files for pattern **/**.exec: 1
+[JaCoCo plugin] Saving matched execfiles:  /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/jacoco/exec/jacoco.exec
+[JaCoCo plugin] Saving matched class directories for class-pattern: **/bin: 
+[JaCoCo plugin]  - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/bin 33 files
+[JaCoCo plugin] Saving matched source directories for source-pattern: **/src/: 
+[JaCoCo plugin] Source Inclusions: **/src/*.java
+[JaCoCo plugin] Source Exclusions: **/test/*.java
+[JaCoCo plugin] WARNING: You are using directory patterns with trailing /, /* or /** . This will most likely multiply the copied files in your build directory. Check the list below and ignore this warning if you know what you are doing.
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler/catalog 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler/course 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler/directory 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler/io 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler/manager 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler/ui 0 files
+[JaCoCo plugin] - /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/src/edu/ncsu/csc216/pack_scheduler/user 0 files
+[JaCoCo plugin] Loading inclusions files..
+[JaCoCo plugin] inclusions: []
+[JaCoCo plugin] exclusions: [**/**Test**.class, **/*ui*/*.class]
+[JaCoCo plugin] Thresholds: JacocoHealthReportThresholds [minClass=0, maxClass=0, minMethod=0, maxMethod=0, minLine=0, maxLine=80, minBranch=0, maxBranch=0, minInstruction=0, maxInstruction=0, minComplexity=0, maxComplexity=0]
+[JaCoCo plugin] Publishing the results..
+[JaCoCo plugin] Loading packages..
+[JaCoCo plugin] Done.
+[JaCoCo plugin] Overall coverage: class: 100.0, method: 96.62921, line: 90.32847, branch: 80.571434, instruction: 92.02702, complexity: 77.81955
+[JaCoCo plugin] Health thresholds: JacocoHealthReportThresholds [minClass=0, maxClass=0, minMethod=0, maxMethod=0, minLine=0, maxLine=80, minBranch=0, maxBranch=0, minInstruction=0, maxInstruction=0, minComplexity=0, maxComplexity=0]
+[JaCoCo plugin] Apply Min/Max thresholds result: SUCCESS
+[CheckStyle] Searching for all files in '/mnt/216/jobs-201/L05-csc217-TS/workspace' that match the pattern '**/checkstyle.xml'
+[CheckStyle] Traversing of symbolic links: enabled
+[CheckStyle] -> found 1 file
+[CheckStyle] Successfully parsed file /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/checkstyle.xml
+[CheckStyle] -> found 0 issues (skipped 0 duplicates)
+[CheckStyle] Successfully processed file 'PackScheduler/checkstyle.xml'
+[CheckStyle] Skipping post processing
+[CheckStyle] No filter has been set, publishing all 0 issues
+[CheckStyle] Repository miner is not configured, skipping repository mining
+[CheckStyle] Searching for all files in '/mnt/216/jobs-201/L05-csc217-TS/workspace' that match the pattern '**/checkstyle.xml'
+[CheckStyle] Traversing of symbolic links: enabled
+[CheckStyle] -> found 1 file
+[CheckStyle] Successfully parsed file /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/checkstyle.xml
+[CheckStyle] -> found 0 issues (skipped 0 duplicates)
+[CheckStyle] Successfully processed file 'PackScheduler/checkstyle.xml'
+[CheckStyle] Skipping post processing
+[CheckStyle] No filter has been set, publishing all 0 issues
+[CheckStyle] Repository miner is not configured, skipping repository mining
+[CheckStyle] Reference build recorder is not configured
+[CheckStyle] No valid reference build found
+[CheckStyle] All reported issues will be considered outstanding
+[CheckStyle] Evaluating quality gates
+[CheckStyle] -> All quality gates have been passed
+[CheckStyle] -> Details for each quality gate:
+[CheckStyle]    - [Total (any severity)]: ≪Success≫ - (Actual value: 0, Quality gate: 1.00)
+[CheckStyle] Health report is disabled - skipping
+[CheckStyle] Created analysis result for 0 issues (found 0 new issues, fixed 0 issues)
+[CheckStyle] Attaching ResultAction with ID 'checkstyle' to build 'L05-csc217-TS #8'.
+[Checks API] No suitable checks publisher found.
+[PMD] Searching for all files in '/mnt/216/jobs-201/L05-csc217-TS/workspace' that match the pattern '**/pmd.xml'
+[PMD] Traversing of symbolic links: enabled
+[PMD] -> found 1 file
+[PMD] Successfully parsed file /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/pmd.xml
+[PMD] -> found 1 issue (skipped 0 duplicates)
+[PMD] Successfully processed file 'PackScheduler/pmd.xml'
+[PMD] Post processing issues on 'Master' with source code encoding 'UTF-8'
+[PMD] Creating SCM blamer to obtain author and commit information for affected files
+[PMD] -> No blamer installed yet. You need to install the 'git-forensics' plugin to enable blaming for Git.
+[PMD] Resolving file names for all issues in workspace '/mnt/216/jobs-201/L05-csc217-TS/workspace'
+[PMD] -> resolved paths in source directory (1 found, 0 not found)
+[PMD] Resolving module names from module definitions (build.xml, pom.xml, or Manifest.mf files)
+[PMD] -> resolved module names for 1 issues
+[PMD] Resolving package names (or namespaces) by parsing the affected files
+[PMD] -> all affected files already have a valid package name
+[PMD] No filter has been set, publishing all 1 issues
+[PMD] Creating fingerprints for all affected code blocks to track issues over different builds
+[PMD] -> created fingerprints for 1 issues (skipped 0 issues)
+[PMD] Copying affected files to Jenkins' build folder '/mnt/216/jobs-201/L05-csc217-TS/builds/8/files-with-issues'
+[PMD] -> 1 copied, 0 not in workspace, 0 not-found, 0 with I/O error
+[PMD] Skipping cleaning of source code files in old builds
+[PMD] Repository miner is not configured, skipping repository mining
+[PMD] Searching for all files in '/mnt/216/jobs-201/L05-csc217-TS/workspace' that match the pattern '**/pmd.xml'
+[PMD] Traversing of symbolic links: enabled
+[PMD] -> found 1 file
+[PMD] Successfully parsed file /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/pmd.xml
+[PMD] -> found 1 issue (skipped 0 duplicates)
+[PMD] Successfully processed file 'PackScheduler/pmd.xml'
+[PMD] Post processing issues on 'Master' with source code encoding 'UTF-8'
+[PMD] Creating SCM blamer to obtain author and commit information for affected files
+[PMD] -> No blamer installed yet. You need to install the 'git-forensics' plugin to enable blaming for Git.
+[PMD] Resolving file names for all issues in workspace '/mnt/216/jobs-201/L05-csc217-TS/workspace'
+[PMD] -> resolved paths in source directory (1 found, 0 not found)
+[PMD] Resolving module names from module definitions (build.xml, pom.xml, or Manifest.mf files)
+[PMD] -> resolved module names for 1 issues
+[PMD] Resolving package names (or namespaces) by parsing the affected files
+[PMD] -> all affected files already have a valid package name
+[PMD] No filter has been set, publishing all 1 issues
+[PMD] Creating fingerprints for all affected code blocks to track issues over different builds
+[PMD] -> created fingerprints for 1 issues (skipped 0 issues)
+[PMD] Copying affected files to Jenkins' build folder '/mnt/216/jobs-201/L05-csc217-TS/builds/8/files-with-issues'
+[PMD] -> 1 copied, 0 not in workspace, 0 not-found, 0 with I/O error
+[PMD] Skipping cleaning of source code files in old builds
+[PMD] Repository miner is not configured, skipping repository mining
+[PMD] Reference build recorder is not configured
+[PMD] No valid reference build found
+[PMD] All reported issues will be considered outstanding
+[PMD] Evaluating quality gates
+[PMD] -> Some quality gates have been missed: overall result is UNSTABLE
+[PMD] -> Details for each quality gate:
+[PMD]    - [Total (any severity)]: ≪Unstable≫ - (Actual value: 1, Quality gate: 1.00)
+[PMD] Health report is disabled - skipping
+[PMD] Created analysis result for 1 issues (found 0 new issues, fixed 0 issues)
+[PMD] Attaching ResultAction with ID 'pmd' to build 'L05-csc217-TS #8'.
+[Checks API] No suitable checks publisher found.
+[SpotBugs] Searching for all files in '/mnt/216/jobs-201/L05-csc217-TS/workspace' that match the pattern '**/spotbugs.xml'
+[SpotBugs] Traversing of symbolic links: enabled
+[SpotBugs] -> found 1 file
+[SpotBugs] Successfully parsed file /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/spotbugs.xml
+[SpotBugs] -> found 0 issues (skipped 0 duplicates)
+[SpotBugs] Successfully processed file 'PackScheduler/spotbugs.xml'
+[SpotBugs] Skipping post processing
+[SpotBugs] No filter has been set, publishing all 0 issues
+[SpotBugs] Repository miner is not configured, skipping repository mining
+[SpotBugs] Searching for all files in '/mnt/216/jobs-201/L05-csc217-TS/workspace' that match the pattern '**/spotbugs.xml'
+[SpotBugs] Traversing of symbolic links: enabled
+[SpotBugs] -> found 1 file
+[SpotBugs] Successfully parsed file /mnt/216/jobs-201/L05-csc217-TS/workspace/PackScheduler/spotbugs.xml
+[SpotBugs] -> found 0 issues (skipped 0 duplicates)
+[SpotBugs] Successfully processed file 'PackScheduler/spotbugs.xml'
+[SpotBugs] Skipping post processing
+[SpotBugs] No filter has been set, publishing all 0 issues
+[SpotBugs] Repository miner is not configured, skipping repository mining
+[SpotBugs] Reference build recorder is not configured
+[SpotBugs] No valid reference build found
+[SpotBugs] All reported issues will be considered outstanding
+[SpotBugs] Evaluating quality gates
+[SpotBugs] -> All quality gates have been passed
+[SpotBugs] -> Details for each quality gate:
+[SpotBugs]    - [Total (any severity)]: ≪Success≫ - (Actual value: 0, Quality gate: 1.00)
+[SpotBugs] Health report is disabled - skipping
+[SpotBugs] Created analysis result for 0 issues (found 0 new issues, fixed 0 issues)
+[SpotBugs] Attaching ResultAction with ID 'spotbugs' to build 'L05-csc217-TS #8'.
+[Checks API] No suitable checks publisher found.
+Build step 'Record compiler warnings and static analysis results' changed build result to UNSTABLE
+[Text Finder] Searching console output...
+[Text Finder] Finished searching for pattern 'SKIPPING TEACHING STAFF TEST CASES' in console output.
+[Text Finder] Searching console output...
+[Text Finder] Finished searching for pattern 'INSUFFICENT STATEMENT COVERAGE' in console output.
+Disk usage plugin fails during calculation disk usage of this build.
+Finished: UNSTABLE
